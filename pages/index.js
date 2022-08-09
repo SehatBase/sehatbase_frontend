@@ -4,10 +4,10 @@ import Typography from "@material-ui/core/Typography";
 import { useState } from "react";
 import List from "../comps/list";
 import data from "../data";
-import Box from "@material-ui/core/Box";
-import zIndex from "@material-ui/core/styles/zIndex";
 
-const useStyles = makeStyles({
+
+const useStyles = makeStyles((theme)=>{
+  return {
   rootContainer: {
     fontFamily: "Open Sans",
     backgroundColor: "#FCFCFC",
@@ -17,6 +17,9 @@ const useStyles = makeStyles({
   innerCont: {
     padding: "10%",
     color: "#7428EA",
+    [theme.breakpoints.down('sm')]:{
+      padding: "5%",
+    },
   },
   innerCont2: {
     color: "white",
@@ -27,32 +30,51 @@ const useStyles = makeStyles({
     margin: "0px",
     fontSize: "64px",
     fontWeight: "700",
+    [theme.breakpoints.down('sm')]:{
+      fontSize:"18px",
+    },
   },
   typoheading2: {
     margin: "0px",
     fontSize: "32px",
     fontWeight: "700",
+    [theme.breakpoints.down('sm')]:{
+      fontSize:"14px",
+    },
   },
   typoheading3: {
     margin: "0px",
     fontSize: "18px",
+    [theme.breakpoints.down('sm')]:{
+      fontSize:"12px",
+    },
    },
   bullets: {
     cursor: "pointer",
     color: "#FF5F98",
+    fontSize:"24px",
+    [theme.breakpoints.down('sm')]:{
+      fontSize:"16px",
+    }, 
   },
   bulletText: {
     fontWeight: "600",
     fontSize:"24px",
     lineHeight: "36px",
     color: "#7428EA",
+    [theme.breakpoints.down('sm')]:{
+      fontSize:"16px",
+    }, 
   },
   hiddenText:{
     fontWeight: "400",
     fontSize:"18px",
     lineHeight: "30px",
     color:"black",
-    letterSpacing: "-0.015em"
+    letterSpacing: "-0.015em",
+    [theme.breakpoints.down('sm')]:{
+      fontSize:"12px",
+    },
   },
   circle: {
     backgroundColor: "#7428EA",
@@ -65,19 +87,30 @@ const useStyles = makeStyles({
     top:"0px",
     left:"0px",
     zIndex: "1",
+    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    [theme.breakpoints.down('sm')]:{
+      padding:"50px",
+      width: "250px",
+      height: "250px",
+    },
   },
   circle2: {
     backgroundColor: "#7428EA7D",
     borderRadius: "50%",
-    padding: "100px",
     width: "672px",
     height: "643px",
     position: "absolute",
     boxSizing: "border-box",
     top: "107px",
     left: "271px",
+    [theme.breakpoints.down('sm')]:{
+      width: "250px",
+      height: "250px",
+      top: "51px",
+      left: "107px",
+    },
   }
-});
+}})
 
 export default function Home() {
   const classes = useStyles();
@@ -111,7 +144,7 @@ export default function Home() {
         <Container className={classes.innerCont} maxWidth={false}>{list}</Container>
         <Container className={classes.innerCont2} maxWidth={false}>
           <div className={classes.circle}>
-            <Typography className={classes.typoheading2}>-- FAQs</Typography>
+            <Typography className={classes.typoheading2}>- FAQ</Typography>
             <Typography className={classes.typoheading1}>Frequently Asked Questions</Typography>
             <Typography className={classes.typoheading3}>Loresm Ipsum Dolaor sit amet consectetur adipisicing elit. Quisquam, quidem.</Typography>
           </div>
