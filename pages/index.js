@@ -1,11 +1,12 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { ThemeProvider } from '@mui/material/styles';
+import React from 'react';
+import Navbar from "../components/Navbar";
+import { muiTheme } from "../config/MuiConfig";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      SehatBase
-    </div>
-  )
+    <ThemeProvider theme={muiTheme}>
+      <Navbar />
+    </ThemeProvider>
+  );
 }
