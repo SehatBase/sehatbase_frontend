@@ -11,46 +11,56 @@ const useStyles = makeStyles({
   rootContainer: {
     fontFamily: "Open Sans",
     backgroundColor: "#FCFCFC",
+    height: "100vh",
     display: "flex",
-    position: "relative",
   },
   innerCont: {
     padding: "10%",
     color: "#7428EA",
-    position:"relative",
-    zIndex:"1"
   },
   innerCont2: {
-    padding: "5%",
-    color: "white",
-    position: "relative",
-    zIndex:"1"
 
+    color: "white",
   },
   typoheading1: {
     margin: "0px",
     fontSize: "64px",
     fontWeight: "700",
-    zIndex: "1",
   },
   typoheading2: {
     margin: "0px",
     fontSize: "32px",
     fontWeight: "700",
-    zIndex: "1",
-
   },
   typoheading3: {
     margin: "0px",
     fontSize: "18px",
-    fontWeight: "400",
-    zIndex: "1",
-  },
+   },
   bullets: {
     cursor: "pointer",
   },
-  circle1:{
+  circle: {
+    backgroundColor: "#7428EA",
+    borderRadius: "50%",
+    padding: "100px",
+    width: "672px",
+    height: "643px",
     position: "absolute",
+    boxSizing: "border-box",
+    top:"51px",
+    left:"709px",
+    zIndex: "1",
+  },
+  circle2: {
+    backgroundColor: "#7428EA7D",
+    borderRadius: "50%",
+    padding: "100px",
+    width: "672px",
+    height: "643px",
+    position: "absolute",
+    boxSizing: "border-box",
+    top: "178px",
+    left: "980px",
   }
 });
 
@@ -85,21 +95,12 @@ export default function Home() {
       <Container className={classes.rootContainer} maxWidth={false}>
         <Container className={classes.innerCont}>{list}</Container>
         <Container className={classes.innerCont2}>
-          <Typography className={classes.typoheading2}>-- FAQs</Typography>
-          <Typography className={classes.typoheading1}>
-            Frequently Asked Questions
-          </Typography>
-          <Typography className={classes.typoheading3}>
-            Lorem impsum yayaydyadyasfjksdknsknvf
-          </Typography>
-      <svg className={classes.circle1}>
-        <circle
-          cx="530"
-          cy="100"
-          r="140"
-          fill="#7428EA"
-        />
-      </svg>
+          <div className={classes.circle}>
+            <Typography className={classes.typoheading2}>FAQs</Typography>
+            <Typography className={classes.typoheading1}>Frequently Asked Questions</Typography>
+            <Typography className={classes.typoheading3}>Loresm Ipsum Dolaor sit amet consectetur adipisicing elit. Quisquam, quidem.</Typography>
+          </div>
+          <div className={classes.circle2}></div>
         </Container>
       </Container>
     </div>
