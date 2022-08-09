@@ -1,7 +1,6 @@
 import { createTheme } from "@mui/material";
-import { deepmerge } from "@mui/utils";
-import React from "react";
 import NextLink from 'next/link';
+import React from "react";
 
 const LinkBehavior = React.forwardRef((props, ref) => {
   const { href, style, ...other } = props;
@@ -16,38 +15,22 @@ const LinkBehavior = React.forwardRef((props, ref) => {
 });
 LinkBehavior.displayName = 'LinkBehavior';
 
-const linkTheme = createTheme({
-  components: {
-    MuiLink: {
-      defaultProps: {
-        component: LinkBehavior,
-      },
-    },
-    MuiButtonBase: {
-      defaultProps: {
-        LinkComponent: LinkBehavior,
-      },
-    },
-  },
-});
-
-
-const uiTheme = createTheme({
+const muiTheme = createTheme({
   palette: {
     // Purple
     primary: {
-      main: 'rgba(116, 40, 234, 1)'
+      main: 'rgba(116, 40, 234, 1)',
+      contrastText: 'rgba(243, 249, 249, 1)'
     },
-    // White
     secondary: {
-      main: 'rgba(243, 249, 249, 0.18)',
-    },
-    // Pink
-    info: {
-      main: 'rgba(255, 95, 152, 1)'
+      main: 'rgba(255, 95, 152, 1)',
+      contrastText: 'rgba(243, 249, 249, 1)'
     }
   },
   typography: {
+    'allVariants': {
+      fontWeight: 500,
+    },
     fontFamily: [
       'Open Sans',
       '-apple-system',
@@ -72,13 +55,18 @@ const uiTheme = createTheme({
         },
         variant: 'contained'
       }
-    }
+    },
+    MuiLink: {
+      defaultProps: {
+        component: LinkBehavior,
+      },
+    },
+    MuiButtonBase: {
+      defaultProps: {
+        LinkComponent: LinkBehavior,
+      },
+    },
   }
 });
 
-const muiTheme = createTheme(deepmerge(uiTheme, linkTheme));
-
 export { muiTheme };
-
-
-
