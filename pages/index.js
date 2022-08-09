@@ -19,8 +19,9 @@ const useStyles = makeStyles({
     color: "#7428EA",
   },
   innerCont2: {
-
     color: "white",
+    overflow:"hidden",
+    position:"relative",
   },
   typoheading1: {
     margin: "0px",
@@ -38,17 +39,31 @@ const useStyles = makeStyles({
    },
   bullets: {
     cursor: "pointer",
+    color: "#FF5F98",
+  },
+  bulletText: {
+    fontWeight: "600",
+    fontSize:"24px",
+    lineHeight: "36px",
+    color: "#7428EA",
+  },
+  hiddenText:{
+    fontWeight: "400",
+    fontSize:"18px",
+    lineHeight: "30px",
+    color:"black",
+    letterSpacing: "-0.015em"
   },
   circle: {
     backgroundColor: "#7428EA",
     borderRadius: "50%",
-    padding: "100px",
+    padding: "120px",
     width: "672px",
     height: "643px",
     position: "absolute",
     boxSizing: "border-box",
-    top:"51px",
-    left:"709px",
+    top:"0px",
+    left:"0px",
     zIndex: "1",
   },
   circle2: {
@@ -59,8 +74,8 @@ const useStyles = makeStyles({
     height: "643px",
     position: "absolute",
     boxSizing: "border-box",
-    top: "178px",
-    left: "980px",
+    top: "107px",
+    left: "271px",
   }
 });
 
@@ -93,10 +108,10 @@ export default function Home() {
   return (
     <div>
       <Container className={classes.rootContainer} maxWidth={false}>
-        <Container className={classes.innerCont}>{list}</Container>
-        <Container className={classes.innerCont2}>
+        <Container className={classes.innerCont} maxWidth={false}>{list}</Container>
+        <Container className={classes.innerCont2} maxWidth={false}>
           <div className={classes.circle}>
-            <Typography className={classes.typoheading2}>FAQs</Typography>
+            <Typography className={classes.typoheading2}>-- FAQs</Typography>
             <Typography className={classes.typoheading1}>Frequently Asked Questions</Typography>
             <Typography className={classes.typoheading3}>Loresm Ipsum Dolaor sit amet consectetur adipisicing elit. Quisquam, quidem.</Typography>
           </div>
