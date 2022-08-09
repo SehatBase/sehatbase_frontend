@@ -1,11 +1,107 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { makeStyles } from "@material-ui/core";
+import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
+import { useState } from "react";
+import List from "../comps/list";
+import data from "../data";
+import Box from "@material-ui/core/Box";
+import zIndex from "@material-ui/core/styles/zIndex";
+
+const useStyles = makeStyles({
+  rootContainer: {
+    fontFamily: "Open Sans",
+    backgroundColor: "#FCFCFC",
+    display: "flex",
+    position: "relative",
+  },
+  innerCont: {
+    padding: "10%",
+    color: "#7428EA",
+    position:"relative",
+    zIndex:"1"
+  },
+  innerCont2: {
+    padding: "5%",
+    color: "white",
+    position: "relative",
+    zIndex:"1"
+
+  },
+  typoheading1: {
+    margin: "0px",
+    fontSize: "64px",
+    fontWeight: "700",
+    zIndex: "1",
+  },
+  typoheading2: {
+    margin: "0px",
+    fontSize: "32px",
+    fontWeight: "700",
+    zIndex: "1",
+
+  },
+  typoheading3: {
+    margin: "0px",
+    fontSize: "18px",
+    fontWeight: "400",
+    zIndex: "1",
+  },
+  bullets: {
+    cursor: "pointer",
+  },
+  circle1:{
+    position: "absolute",
+  }
+});
 
 export default function Home() {
+  const classes = useStyles();
+  const [show, setShow] = useState([true, true, false, false]);
+  console.log(show);
+  function handleClick(id) {
+    setShow(
+      show.map((item, index) => {
+        if (index === id) {
+          return !item;
+        }
+        return item;
+      })
+    );
+  }
+  const list = data.map((item) => {
+    return (
+      <List
+        key={item.id}
+        id={item.id}
+        comment={item.comment}
+        show={show[item.id]}
+        handleClick={handleClick}
+        classes={classes}
+      />
+    );
+  });
   return (
-    <div className={styles.container}>
-      SehatBase
+    <div>
+      <Container className={classes.rootContainer} maxWidth={false}>
+        <Container className={classes.innerCont}>{list}</Container>
+        <Container className={classes.innerCont2}>
+          <Typography className={classes.typoheading2}>-- FAQs</Typography>
+          <Typography className={classes.typoheading1}>
+            Frequently Asked Questions
+          </Typography>
+          <Typography className={classes.typoheading3}>
+            Lorem impsum yayaydyadyasfjksdknsknvf
+          </Typography>
+      <svg className={classes.circle1}>
+        <circle
+          cx="530"
+          cy="100"
+          r="140"
+          fill="#7428EA"
+        />
+      </svg>
+        </Container>
+      </Container>
     </div>
-  )
+  );
 }
