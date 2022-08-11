@@ -4,11 +4,6 @@ import { muiTheme } from "../config/MuiConfig";
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
-<<<<<<< HEAD
-  return <Component {...pageProps}>
-
-  </Component>
-=======
   return (
     <CssBaseline>
       <ThemeProvider theme={muiTheme}>
@@ -16,7 +11,6 @@ function MyApp({ Component, pageProps }) {
       </ThemeProvider>
     </CssBaseline>
   );
->>>>>>> main
 }
 
 export default MyApp;
