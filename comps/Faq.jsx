@@ -17,9 +17,13 @@ const useStyles = makeStyles((theme)=>{
   innerCont: {
     padding: "10%",
     color: "#7428EA",
+    overflow: "scroll",
     [theme.breakpoints.down('sm')]:{
       padding: "5%",
     },
+    "&::-webkit-scrollbar": {
+        display: "none",
+    }
   },
   innerCont2: {
     color: "white",
@@ -31,7 +35,7 @@ const useStyles = makeStyles((theme)=>{
     fontSize: "64px",
     fontWeight: "700",
     [theme.breakpoints.down('sm')]:{
-      fontSize:"18px",
+        display: "none",
     },
   },
   typoheading2: {
@@ -39,14 +43,14 @@ const useStyles = makeStyles((theme)=>{
     fontSize: "32px",
     fontWeight: "700",
     [theme.breakpoints.down('sm')]:{
-      fontSize:"14px",
+        fontSize:"26px",
     },
   },
   typoheading3: {
     margin: "0px",
     fontSize: "18px",
     [theme.breakpoints.down('sm')]:{
-      fontSize:"12px",
+      display:"none",
     },
    },
   bullets: {
@@ -63,7 +67,7 @@ const useStyles = makeStyles((theme)=>{
     lineHeight: "36px",
     color: "#7428EA",
     [theme.breakpoints.down('sm')]:{
-      fontSize:"16px",
+      fontSize:"20px",
     }, 
   },
   hiddenText:{
@@ -73,7 +77,7 @@ const useStyles = makeStyles((theme)=>{
     color:"black",
     letterSpacing: "-0.015em",
     [theme.breakpoints.down('sm')]:{
-      fontSize:"12px",
+      fontSize:"16px",
     },
   },
   circle: {
@@ -92,6 +96,7 @@ const useStyles = makeStyles((theme)=>{
       padding:"50px",
       width: "250px",
       height: "250px",
+      textAlign: "left",
     },
   },
   circle2: {
@@ -143,7 +148,7 @@ export default function Faq() {
           <Container className={classes.innerCont} maxWidth={false}>{list}</Container>
           <Container className={classes.innerCont2} maxWidth={false}>
             <div className={classes.circle}>
-              <Typography className={classes.typoheading2}>- FAQ</Typography>
+              <Typography className={classes.typoheading2}> FAQs</Typography>
               <Typography className={classes.typoheading1}>Frequently Asked Questions</Typography>
               <Typography className={classes.typoheading3}>Loresm Ipsum Dolaor sit amet consectetur adipisicing elit. Quisquam, quidem.</Typography>
             </div>
