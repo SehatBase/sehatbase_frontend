@@ -7,8 +7,8 @@ export default function List(props) {
     
   return (
     <div>
-        {props.show?<RemoveCircleOutlineOutlinedIcon className={props.classes.bullets} onClick={()=>props.handleClick(props.id)}></RemoveCircleOutlineOutlinedIcon>:<AddCircleOutlineOutlinedIcon className={props.classes.bullets} onClick={()=>props.handleClick(props.id)}></AddCircleOutlineOutlinedIcon>}<span className={props.classes.bulletText}> This is the Question?</span>
-        {props.show&&<p className={props.classes.hiddenText}>Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam.</p>}
+        {props.show?<RemoveCircleOutlineOutlinedIcon className={props.classes.bullets} onClick={()=>props.handleClick(props.id)}></RemoveCircleOutlineOutlinedIcon>:<AddCircleOutlineOutlinedIcon className={props.classes.bullets} onClick={()=>props.handleClick(props.id)}></AddCircleOutlineOutlinedIcon>}<span className={props.classes.bulletText}> {props.question}</span>
+        {props.show&&<p className={props.classes.hiddenText}>{props.text}</p>}
     </div>
   )
 }

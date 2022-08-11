@@ -94,8 +94,8 @@ const useStyles = makeStyles((theme)=>{
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
     [theme.breakpoints.down('sm')]:{
       padding:"50px",
-      width: "250px",
-      height: "250px",
+      width: "210px",
+      height: "210px",
       textAlign: "left",
     },
   },
@@ -109,8 +109,8 @@ const useStyles = makeStyles((theme)=>{
     top: "107px",
     left: "271px",
     [theme.breakpoints.down('sm')]:{
-      width: "250px",
-      height: "250px",
+      width: "210px",
+      height: "210px",
       top: "51px",
       left: "107px",
     },
@@ -136,6 +136,8 @@ export default function Faq() {
           key={item.id}
           id={item.id}
           comment={item.comment}
+          question={item.question}
+          text={item.text}
           show={show[item.id]}
           handleClick={handleClick}
           classes={classes}
