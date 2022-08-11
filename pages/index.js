@@ -5,8 +5,6 @@ import { muiTheme } from "../config/MuiConfig";
 
 export default function Home() {
   return (
-    <ThemeProvider theme={muiTheme}>
-      <Navbar />
-    </ThemeProvider>
+    <Navbar />
   );
 }
