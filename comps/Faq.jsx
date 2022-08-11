@@ -2,8 +2,8 @@ import { makeStyles } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { useState } from "react";
-import List from "../comps/list";
 import data from "../data";
+import List from "./List";
 
 
 const useStyles = makeStyles((theme)=>{
@@ -148,7 +148,7 @@ export default function Faq() {
           <Container className={classes.innerCont} maxWidth={false}>{list}</Container>
           <Container className={classes.innerCont2} maxWidth={false}>
             <div className={classes.circle}>
-              <Typography className={classes.typoheading2}> FAQs</Typography>
+              <Typography className={classes.typoheading2}>— FAQs</Typography>
               <Typography className={classes.typoheading1}>Frequently Asked Questions</Typography>
               <Typography className={classes.typoheading3}>Loresm Ipsum Dolaor sit amet consectetur adipisicing elit. Quisquam, quidem.</Typography>
             </div>
