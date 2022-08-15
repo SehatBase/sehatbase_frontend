@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme)=>{
     overflow: "scroll",
     [theme.breakpoints.down('sm')]:{
       padding: "5%",
-      height:"90%",
+      height:"100%",
     },
     "&::-webkit-scrollbar": {
         display: "none",
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme)=>{
     fontWeight: "700",
     [theme.breakpoints.down('sm')]:{
         color:"#7428EA",
-        fontSize: "48px",
+        fontSize: "24px",
     },
   },
   typoheading2: {
@@ -42,8 +42,7 @@ const useStyles = makeStyles((theme)=>{
     fontSize: "32px",
     fontWeight: "700",
     [theme.breakpoints.down('sm')]:{
-      color:"#7428EA",
-      fontSize: "24px",
+      display:"none",
     },
   },
   typoheading3: {
@@ -96,8 +95,10 @@ const useStyles = makeStyles((theme)=>{
     [theme.breakpoints.down('sm')]:{
       position: "relative",
       width: "100%",
+      height: "100%",
       borderRadius: "0px",
       padding: "5%",
+      margin:"20% 0% 20% 0%",
       backgroundColor: "transparent",
       boxShadow: "none",
     },
