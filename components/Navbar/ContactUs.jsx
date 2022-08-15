@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@mui/material";
+import { Container, Button } from "@mui/material";
 
 export default function ContactUs() {
   return (
@@ -10,9 +10,9 @@ export default function ContactUs() {
       <Container>
         <form id="message">
           <input type="text" placeholder="First Name"></input>
-          <input type="text" placeholder="Last Name"></input>
-          <input type="text" placeholder="Email Adress"></input>
-          <input type="submit" value="Submit"></input>
+          <input type="text" placeholder="Last Name"></input><br></br>
+          <input type="text" placeholder="Email Adress"></input><br></br>
+          <Button>Submit</Button>
         </form>
         <textarea rows="4" cols="50" name="message" form="message">
           Message
