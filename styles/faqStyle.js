@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme)=>{
     backgroundColor: "#FCFCFC",
     height: "100vh",
     display: "flex",
+    [theme.breakpoints.down('sm')]:{
+    flexDirection: "column-reverse",
+    },
   },
   innerCont: {
     padding: "10%",
@@ -14,6 +17,7 @@ const useStyles = makeStyles((theme)=>{
     overflow: "scroll",
     [theme.breakpoints.down('sm')]:{
       padding: "5%",
+      height:"90%",
     },
     "&::-webkit-scrollbar": {
         display: "none",
@@ -29,7 +33,8 @@ const useStyles = makeStyles((theme)=>{
     fontSize: "64px",
     fontWeight: "700",
     [theme.breakpoints.down('sm')]:{
-        display: "none",
+        color:"#7428EA",
+        fontSize: "48px",
     },
   },
   typoheading2: {
@@ -37,14 +42,16 @@ const useStyles = makeStyles((theme)=>{
     fontSize: "32px",
     fontWeight: "700",
     [theme.breakpoints.down('sm')]:{
-        fontSize:"26px",
+      color:"#7428EA",
+      fontSize: "24px",
     },
   },
   typoheading3: {
     margin: "0px",
     fontSize: "18px",
     [theme.breakpoints.down('sm')]:{
-      display:"none",
+      color:"black",
+      fontSize: "14px",
     },
    },
   bullets: {
@@ -87,10 +94,12 @@ const useStyles = makeStyles((theme)=>{
     zIndex: "1",
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
     [theme.breakpoints.down('sm')]:{
-      padding:"50px",
-      width: "210px",
-      height: "210px",
-      textAlign: "left",
+      position: "relative",
+      width: "100%",
+      borderRadius: "0px",
+      padding: "5%",
+      backgroundColor: "transparent",
+      boxShadow: "none",
     },
   },
   circle2: {
@@ -103,12 +112,10 @@ const useStyles = makeStyles((theme)=>{
     top: "107px",
     left: "271px",
     [theme.breakpoints.down('sm')]:{
-      width: "210px",
-      height: "210px",
-      top: "51px",
-      left: "107px",
+      display:"none",
     },
-  }
+  },
+
 }})
 
 export { useStyles };

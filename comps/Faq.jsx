@@ -4,7 +4,7 @@ import { useState } from "react";
 import data from "../data";
 import List from "./list";
 import {useStyles} from "../styles/faqStyle";
-
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 
 export default function Faq() {
@@ -35,7 +35,7 @@ export default function Faq() {
         />
       );
     });
-    return (
+        return (
       <div>
         <Container className={classes.rootContainer} maxWidth={false}>
           <Container className={classes.innerCont} maxWidth={false}>{list}</Container>
@@ -43,7 +43,7 @@ export default function Faq() {
             <div className={classes.circle}>
               <Typography className={classes.typoheading2}>— FAQs</Typography>
               <Typography className={classes.typoheading1}>Frequently Asked Questions</Typography>
-              <Typography className={classes.typoheading3}>Loresm Ipsum Dolaor sit amet consectetur adipisicing elit. Quisquam, quidem.</Typography>
+              <Typography className={classes.typoheading3}>Loreesssm Ipsum Dolaor sit amet consectetur adipisicing elit. Quisquam, quidem.</Typography>
             </div>
             <div className={classes.circle2}></div>
           </Container>
