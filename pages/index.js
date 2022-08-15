@@ -1,10 +1,10 @@
+import { ThemeProvider } from '@mui/material/styles';
 import React from 'react';
-import Faq from '../comps/Faq';
+import Navbar from "../components/Navbar";
+import { muiTheme } from "../config/MuiConfig";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      SehatBase
-    </div>
-  )
+    <Navbar />
+  );
 }
