@@ -96,7 +96,7 @@ const Navbar = () => {
           right: 0,
           overflow: "hidden",
           zIndex: 100,
-          background: theme.palette.primary.light,
+          background: theme.palette.primary.dark,
           width: "max(33.3%, 300px)",
           height: "75vh",
           display: "flex",
