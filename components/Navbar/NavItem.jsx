@@ -17,7 +17,7 @@ const NavItem = ({ text, href, isMobile }) => {
       alignItems="center"
       justifyContent="space-between"
     >
-      <Link href={href}>
+      <Link href={href} component="a" sx={{ textDecoration: "none" }}>
         <Typography
           color={isMobile ? "white" : "primary"}
           textTransform={"none"}

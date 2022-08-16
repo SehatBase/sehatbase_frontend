@@ -50,16 +50,14 @@ const Navbar = () => {
   const theme = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMediaQuery(theme => theme.breakpoints.down("md"));
-  console.log({ isMobile, isMenuOpen });
 
   return (
-    <Box sx={{ overflow: "hidden" }}>
+    <Box id="navbar" sx={{ overflow: "hidden" }}>
       <Container
         sx={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          paddingY: "1rem",
         }}
       >
         <Box sx={{ cursor: "pointer" }}>
@@ -87,6 +85,7 @@ const Navbar = () => {
         </Box>
       </Container>
 
+      {/* Sidebar */}
       <Paper
         sx={{
           border: `10px solid ${theme.palette.primary}`,
@@ -102,9 +101,9 @@ const Navbar = () => {
           flexDirection: "column",
           justifyContent: "space-evenly",
           transform: `translateX(${
-            !isMenuOpen || !isMobile ? "1000px" : "0px"
+            !isMenuOpen || !isMobile ? "600px" : "0px"
           })`,
-          transition: "transform 0.5s ease-in-out",
+          transition: "transform 0.5s ease-out",
         }}
       >
         <NavMenu isMobile={isMobile} />
