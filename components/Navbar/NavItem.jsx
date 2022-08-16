@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import { hrefToText } from "../../utils/NavLinksHelper";
 
-const NavItem = ({ text, href }) => {
+const NavItem = ({ text, href, isMobile }) => {
   const theme = useTheme();
   const router = useRouter();
 
@@ -19,7 +19,7 @@ const NavItem = ({ text, href }) => {
     >
       <Link href={href}>
         <Typography
-          color={"primary"}
+          color={isMobile ? "white" : "primary"}
           textTransform={"none"}
           variant="body2"
           sx={{

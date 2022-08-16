@@ -1,5 +1,17 @@
-import { Box, Button, Link } from "@mui/material";
+import { useTheme } from "@emotion/react";
+import CloseTwoToneIcon from "@mui/icons-material/CloseTwoTone";
+import MenuTwoToneIcon from "@mui/icons-material/MenuTwoTone";
+import {
+  Box,
+  Button,
+  IconButton,
+  Link,
+  Paper,
+  useMediaQuery,
+} from "@mui/material";
 import { Container } from "@mui/system";
+import Image from "next/image";
+import { useState } from "react";
 import NavItem from "./NavItem";
 
 export const navItems = {
@@ -35,45 +47,105 @@ export const navItems = {
 };
 
 const Navbar = () => {
-  return (
-    <Container
-      sx={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        paddingY: "1rem",
-      }}
-    >
-      <Box>
-        <Link href="/">Brand</Link>
-      </Box>
+  const theme = useTheme();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = useMediaQuery(theme => theme.breakpoints.down("md"));
+  console.log({ isMobile, isMenuOpen });
 
-      <Box
+  return (
+    <Box sx={{ overflow: "hidden" }}>
+      <Container
         sx={{
           display: "flex",
-          alignItems: "center",
           justifyContent: "space-between",
-          width: "60%",
+          alignItems: "center",
+          paddingY: "1rem",
         }}
       >
-        {navItems.links.map(item => (
-          <NavItem key={item.text} {...item} />
-        ))}
-
-        <Box sx={{ marginLeft: "2.5rem" }}>
-          {navItems.buttons.map(item => (
-            <Button
-              key={item.text}
-              size="medium"
-              sx={{ paddingX: "1.5rem", textTransform: "none" }}
-            >
-              <Link href={item.href}>{item.text}</Link>
-            </Button>
-          ))}
+        <Box sx={{ cursor: "pointer" }}>
+          <Link href="/">
+            <Image src="/brand.png" alt="Sehatbase" height={64} width={84} />
+          </Link>
         </Box>
-      </Box>
-    </Container>
+
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: isMobile ? "end" : "space-between",
+            width: "60%",
+          }}
+        >
+          {/* Conditional Rendering */}
+          {!isMobile ? (
+            <NavMenu isMobile={isMobile} />
+          ) : (
+            <IconButton color="primary" onClick={() => setIsMenuOpen(p => !p)}>
+              {isMenuOpen ? <CloseTwoToneIcon /> : <MenuTwoToneIcon />}
+            </IconButton>
+          )}
+        </Box>
+      </Container>
+
+      <Paper
+        sx={{
+          border: `10px solid ${theme.palette.primary}`,
+          position: "absolute",
+          right: 0,
+          overflow: "hidden",
+          zIndex: 100,
+          background: theme.palette.primary.light,
+          width: "max(33.3%, 300px)",
+          height: "75vh",
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+          justifyContent: "space-evenly",
+          transform: `translateX(${
+            !isMenuOpen || !isMobile ? "1000px" : "0px"
+          })`,
+          transition: "transform 0.5s ease-in-out",
+        }}
+      >
+        <NavMenu isMobile={isMobile} />
+      </Paper>
+    </Box>
   );
 };
+
+function NavMenu({ isMobile }) {
+  const theme = useTheme();
+  return (
+    <>
+      {navItems.links.map(item => (
+        <NavItem key={item.text} {...item} isMobile={isMobile} />
+      ))}
+
+      <Box sx={{ marginLeft: "2.5rem" }}>
+        {navItems.buttons.map(item => (
+          <Link key={item.text} href={item.href}>
+            <Button
+              size="medium"
+              variant="contained"
+              sx={{
+                paddingX: "1.5rem",
+                ...(isMobile && {
+                  background: theme.palette.primary.contrastText,
+                  color: theme.palette.primary.main,
+                }),
+                textTransform: "none",
+                ":hover": isMobile && {
+                  color: theme.palette.primary.contrastText,
+                },
+              }}
+            >
+              {item.text}
+            </Button>
+          </Link>
+        ))}
+      </Box>
+    </>
+  );
+}
 
 export default Navbar;
