@@ -1,10 +1,12 @@
-import { ThemeProvider } from '@mui/material/styles';
 import React from 'react';
 import Navbar from "../components/Navbar";
-import { muiTheme } from "../config/MuiConfig";
+import HeroSection from '../components/HeroSection';
 
 export default function Home() {
   return (
-    <Navbar />
+    <>
+      <Navbar />
+      <HeroSection />
+    </>
   );
 }
