@@ -5,7 +5,7 @@ import { Box, Button, IconButton, Link, Paper } from "@mui/material";
 import { Container } from "@mui/system";
 import Image from "next/image";
 import { useState } from "react";
-import useResponsive from "../../hooks/useResponsive";
+import { useResponsive } from "../../hooks";
 import NavItem from "./NavItem";
 
 export const navItems = {

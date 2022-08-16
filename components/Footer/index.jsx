@@ -1,7 +1,6 @@
 import { useTheme } from "@emotion/react";
-import { useMediaQuery } from "@mui/material";
 import { Box, Container } from "@mui/system";
-import useResponsive from "../../hooks/useResponsive";
+import { useResponsive } from "../../hooks";
 import FooterBottom from "./FooterBottom";
 import FooterLogo from "./FooterLogo";
 import LinksList from "./LinksList";

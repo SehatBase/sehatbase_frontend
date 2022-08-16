@@ -1,7 +1,7 @@
 import { Box, Button, Link, Typography } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import useResponsive from "../../hooks/useResponsive";
+import { useResponsive } from "../../hooks";
 
 const HeroSection = () => {
   const [navbarHeight, setNavbarHeight] = useState(0);
