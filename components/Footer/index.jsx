@@ -1,6 +1,7 @@
 import { useTheme } from "@emotion/react";
 import { useMediaQuery } from "@mui/material";
 import { Box, Container } from "@mui/system";
+import useResponsive from "../../hooks/useResponsive";
 import FooterBottom from "./FooterBottom";
 import FooterLogo from "./FooterLogo";
 import LinksList from "./LinksList";
@@ -33,10 +34,7 @@ const mobileAppLinks = [
 const Footer = () => {
   const theme = useTheme();
 
-  const isMobile = useMediaQuery(theme => theme.breakpoints.down("md"));
-  const isTablet = useMediaQuery(
-    theme => theme.breakpoints.up("md") && theme.breakpoints.down("lg")
-  );
+  const { isMobile, isTablet } = useResponsive();
 
   const circleSize = isMobile ? 150 : 300;
 

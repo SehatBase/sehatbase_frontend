@@ -1,17 +1,11 @@
 import { useTheme } from "@emotion/react";
 import CloseTwoToneIcon from "@mui/icons-material/CloseTwoTone";
 import MenuTwoToneIcon from "@mui/icons-material/MenuTwoTone";
-import {
-  Box,
-  Button,
-  IconButton,
-  Link,
-  Paper,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Button, IconButton, Link, Paper } from "@mui/material";
 import { Container } from "@mui/system";
 import Image from "next/image";
 import { useState } from "react";
+import useResponsive from "../../hooks/useResponsive";
 import NavItem from "./NavItem";
 
 export const navItems = {
@@ -49,10 +43,7 @@ export const navItems = {
 const Navbar = () => {
   const theme = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isMobile = useMediaQuery(theme => theme.breakpoints.down("md"));
-  const isTablet = useMediaQuery(
-    theme => theme.breakpoints.up("md") && theme.breakpoints.down("lg")
-  );
+  const { isMobile, isTablet } = useResponsive();
 
   return (
     <Box id="navbar" sx={{ overflow: "hidden" }}>

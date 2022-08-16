@@ -1,13 +1,11 @@
-import { Box, Button, Link, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Link, Typography } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import useResponsive from "../../hooks/useResponsive";
 
 const HeroSection = () => {
   const [navbarHeight, setNavbarHeight] = useState(0);
-  const isMobile = useMediaQuery(theme => theme.breakpoints.down("md"));
-  const isTablet = useMediaQuery(
-    theme => theme.breakpoints.up("md") && theme.breakpoints.down("lg")
-  );
+  const { isMobile, isTablet } = useResponsive();
 
   useEffect(() => {
     setNavbarHeight(
