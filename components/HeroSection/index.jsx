@@ -8,7 +8,7 @@ const HeroSection = () => {
   const isTablet = useMediaQuery(
     theme => theme.breakpoints.up("md") && theme.breakpoints.down("lg")
   );
-  console.log({ isTablet, isMobile });
+
   useEffect(() => {
     setNavbarHeight(
       Number(window.innerHeight) -
