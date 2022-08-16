@@ -50,6 +50,9 @@ const Navbar = () => {
   const theme = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMediaQuery(theme => theme.breakpoints.down("md"));
+  const isTablet = useMediaQuery(
+    theme => theme.breakpoints.up("md") && theme.breakpoints.down("lg")
+  );
 
   return (
     <Box id="navbar" sx={{ overflow: "hidden" }}>
@@ -71,7 +74,7 @@ const Navbar = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: isMobile ? "end" : "space-between",
-            width: "60%",
+            width: `${isTablet ? "70%" : "60%"}`,
           }}
         >
           {/* Conditional Rendering */}
