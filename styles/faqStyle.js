@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core";
+import { textAlign } from "@mui/system";
 
 const useStyles = makeStyles((theme)=>{
   return {
@@ -56,9 +57,9 @@ const useStyles = makeStyles((theme)=>{
   bullets: {
     cursor: "pointer",
     color: "#FF5F98",
-    fontSize:"24px",
+    fontSize:"28px",
     [theme.breakpoints.down('sm')]:{
-      fontSize:"16px",
+      fontSize:"24px",
     }, 
   },
   bulletText: {
@@ -116,6 +117,18 @@ const useStyles = makeStyles((theme)=>{
       display:"none",
     },
   },
+  listDiv:{
+    display: "flex",
+    
+  },
+  listIcon:{
+    margin:"4% 3%",
+    padding: "2% 0%",
+    [theme.breakpoints.down('sm')]:{
+      margin:"5% 3%",
+    },
+
+  }
 
 }})
 

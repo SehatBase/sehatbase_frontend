@@ -1,10 +1,8 @@
-import { ThemeProvider } from '@mui/material/styles';
 import React from 'react';
-import Navbar from "../components/Navbar";
-import { muiTheme } from "../config/MuiConfig";
+import Faq from "../comps/Faq"
 
 export default function Home() {
   return (
-    <Navbar />
+    <Faq />
   );
 }
