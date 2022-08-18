@@ -123,7 +123,7 @@ function NavMenu({ isMobile }) {
         <NavItem key={item.text} {...item} isMobile={isMobile} />
       ))}
 
-      <Box sx={{ marginLeft: "2.5rem" }}>
+      <Box sx={{ ...(!isMobile && { marginLeft: "2.5rem" }) }}>
         {navItems.buttons.map(item => (
           <Link key={item.text} href={item.href}>
             <Button
