@@ -1,12 +1,13 @@
 import { useTheme } from "@emotion/react";
 import CloseTwoToneIcon from "@mui/icons-material/CloseTwoTone";
 import MenuTwoToneIcon from "@mui/icons-material/MenuTwoTone";
-import { Box, Button, IconButton, Link, Paper } from "@mui/material";
+import { Box, IconButton, Link } from "@mui/material";
 import { Container } from "@mui/system";
 import Image from "next/image";
 import { useState } from "react";
 import { useResponsive } from "../../hooks";
-import NavItem from "./NavItem";
+import NavMenu from "./NavMenu";
+import Sidebar from "./Sidebar";
 
 export const navItems = {
   links: [
@@ -70,7 +71,7 @@ const Navbar = () => {
         >
           {/* Conditional Rendering */}
           {!isMobile ? (
-            <NavMenu isMobile={isMobile} />
+            <NavMenu navItems={navItems} />
           ) : (
             <IconButton color="primary" onClick={() => setIsMenuOpen(p => !p)}>
               {isMenuOpen ? <CloseTwoToneIcon /> : <MenuTwoToneIcon />}
@@ -79,66 +80,9 @@ const Navbar = () => {
         </Box>
       </Container>
 
-      {/* Sidebar */}
-      <Paper
-        sx={{
-          border: `10px solid ${theme.palette.primary}`,
-          position: "absolute",
-          right: 0,
-          overflow: "hidden",
-          zIndex: 100,
-          background: theme.palette.primary.main,
-          width: "max(33.3%, 300px)",
-          height: "75vh",
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "column",
-          justifyContent: "space-evenly",
-          transform: `translateX(${
-            !isMenuOpen || !isMobile ? "600px" : "0px"
-          })`,
-          transition: "transform 0.5s ease-out",
-        }}
-      >
-        <NavMenu isMobile={isMobile} />
-      </Paper>
+      <Sidebar isMenuOpen={isMenuOpen} navItems={navItems} />
     </Box>
   );
 };
-
-function NavMenu({ isMobile }) {
-  const theme = useTheme();
-  return (
-    <>
-      {navItems.links.map(item => (
-        <NavItem key={item.text} {...item} isMobile={isMobile} />
-      ))}
-
-      <Box sx={{ ...(!isMobile && { marginLeft: "2.5rem" }) }}>
-        {navItems.buttons.map(item => (
-          <Link key={item.text} href={item.href}>
-            <Button
-              size="medium"
-              variant="contained"
-              sx={{
-                paddingX: "1.5rem",
-                ...(isMobile && {
-                  background: theme.palette.primary.contrastText,
-                  color: theme.palette.primary.main,
-                }),
-                textTransform: "none",
-                ":hover": isMobile && {
-                  color: theme.palette.primary.contrastText,
-                },
-              }}
-            >
-              {item.text}
-            </Button>
-          </Link>
-        ))}
-      </Box>
-    </>
-  );
-}
 
 export default Navbar;
