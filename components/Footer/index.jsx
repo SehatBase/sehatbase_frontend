@@ -63,11 +63,12 @@ const Footer = () => {
           <LinksList heading="Mobile app" links={mobileAppLinks} />
           <LinksList heading="Company" links={companyLinks} />
         </Box>
+        {/* Horizontal Rule */}
         <Box
           sx={{
-            width: "100%",
+            width: "90%",
             borderTop: "2px solid white",
-            margin: "1rem",
+            margin: "1rem auto",
           }}
         ></Box>
         <FooterBottom isMobile={isMobile} isTablet={isTablet} />
