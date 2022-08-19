@@ -21,7 +21,7 @@ const NavItem = ({ text, href, isMobile }) => {
         <Typography
           color={isMobile ? "white" : "primary"}
           textTransform={"none"}
-          variant="body2"
+          variant={`${isMobile ? "body1" : "body2"}`}
           sx={{
             cursor: "pointer",
           }}
