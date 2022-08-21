@@ -1,4 +1,3 @@
-import { useTheme } from "@emotion/react";
 import CloseTwoToneIcon from "@mui/icons-material/CloseTwoTone";
 import MenuTwoToneIcon from "@mui/icons-material/MenuTwoTone";
 import { Box, IconButton, Link } from "@mui/material";
@@ -42,7 +41,6 @@ export const navItems = {
 };
 
 const Navbar = () => {
-  const theme = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isMobile, isTablet } = useResponsive();
 
