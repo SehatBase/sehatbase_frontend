@@ -16,6 +16,7 @@
     "@mui/material": "^5.9.3",
     "babel-plugin-styled-components": "^2.0.7",
     "material-ui-image": "^3.3.2",
+    "@mui/icons-material": "^5.8.4",
     "next": "^12.2.3",
     "next-images": "^1.8.4",
     "react": "18.2.0",
