@@ -1,5 +1,6 @@
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
+import Features from "../components/Features/features";
 import { muiTheme } from "../config/MuiConfig";
 import '../styles/globals.css';
 
