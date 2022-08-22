@@ -25,12 +25,6 @@ export default makeStyles((theme) => ({
         flexDirection: 'column'
     },
     title: {
-        // position: 'absolute',
-        // width: '1009px',
-        // height: '227px',
-        // left: ' calc(50% - 1009px/2 - 222px)',
-        // top: 'calc(50% - 227px/2 - 463.5px)',
-
         fontFamily: 'Open Sans',
         fontStyle: 'normal',
         fontWeight: 700,
@@ -72,23 +66,20 @@ export default makeStyles((theme) => ({
     },
 
     feature1Container: {
-        // position: 'absolute',
+       
         width: '1283.3px',
         height: '304px',
         display: 'flex',
         flexDirection: 'row',
-        // left: '310px',
-        // top: '425px'
+        
     },
     feature2Container: {
         marginTop:'153px',
-        // position: 'absolute',
         width: '1283.3px',
         height: '304px',
         display: 'flex',
         flexDirection: 'row',
-        // left: '310px',
-        // top: '882px'
+       
     },
 
     feature3rootContainer: {
@@ -99,8 +90,7 @@ export default makeStyles((theme) => ({
         flexDirection: 'row',
         left: '0px',
         top: '1356px',
-        // justifyContent: 'center',
-        // alignItems:'center',
+    
     
     },
 
@@ -124,11 +114,8 @@ export default makeStyles((theme) => ({
     },
 
     feature3content: {
-        // position: 'absolute',
         display: 'flex',
         flexDirection: 'column',
-        // left: '326px',
-        // top: '155px',
         width:'500px',
        
     },
@@ -212,7 +199,6 @@ export default makeStyles((theme) => ({
     feature3icon :{
             width: 'fit-content',
             marginBottom:'121px',
-            // marginRight:'400px',
             
     },
 
