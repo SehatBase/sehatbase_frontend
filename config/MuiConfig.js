@@ -1,5 +1,6 @@
 import { createTheme } from "@mui/material";
 import NextLink from 'next/link';
+import PropTypes from 'prop-types';
 import React from "react";
 
 const LinkBehavior = React.forwardRef((props, ref) => {
@@ -8,12 +9,23 @@ const LinkBehavior = React.forwardRef((props, ref) => {
     <NextLink
       ref={ref}
       href={href}
-      style={{ ...style, textDecoration: "none", color: "inherit" }}
+      passHref={true}
+      style={{ ...style, textDecoration: "none", color: "inherit", }}
       {...other}
     />
   );
 });
 LinkBehavior.displayName = 'LinkBehavior';
+LinkBehavior.propTypes = {
+  href: PropTypes.oneOfType([
+    PropTypes.shape({
+      hash: PropTypes.string,
+      pathname: PropTypes.string,
+      search: PropTypes.string,
+    }),
+    PropTypes.string,
+  ]).isRequired,
+};
 
 const muiTheme = createTheme({
   palette: {
@@ -59,11 +71,6 @@ const muiTheme = createTheme({
     MuiLink: {
       defaultProps: {
         component: LinkBehavior,
-      },
-    },
-    MuiButtonBase: {
-      defaultProps: {
-        LinkComponent: LinkBehavior,
       },
     },
   }
