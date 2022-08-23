@@ -1,4 +1,4 @@
-import { Container, Typography, useTheme } from '@mui/material'
+import { Container, Typography, useMediaQuery, useTheme } from '@mui/material'
 import Image from 'next/image';
 import React from 'react'
 import useStyles from './styles'
@@ -8,8 +8,6 @@ import feature2Icon from '../../public/Feature2_icon.png'
 import feature3Icon from '../../public/Feature3_icon.png'
 import feature3rectangle from '../../public/Feature3_rectangle.png'
 import Button from '@mui/material/Button';
-import { useMediaQuery } from '@material-ui/core';
-
 
 
 function Features() {
