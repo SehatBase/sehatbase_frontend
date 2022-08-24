@@ -24,7 +24,7 @@ export default function Newsletter() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button onMouseEnter={handleOpen}>Open modal</Button>
       <Modal
         open={open}
         onClose={handleClose}
