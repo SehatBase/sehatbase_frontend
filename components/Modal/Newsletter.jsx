@@ -9,7 +9,7 @@ import { TextField, FormGroup } from "@mui/material";
 export default function Newsletter() {
   const classes = useStyles();
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [email, setEmail] = React.useState("");
@@ -28,8 +28,6 @@ export default function Newsletter() {
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
       >
         <Container className={classes.modalContainer} maxWidth={false}>
           <Typography className={classes.typo1}>
