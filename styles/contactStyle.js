@@ -51,10 +51,20 @@ const useStyles = makeStyles((theme) => {
       color: " #7428EA",
       fontSize: "75px",
       margin: "0 5% 2% 2%",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "50px",
+      },
+
     },
     iconCont: {
       display: "flex",
     },
+    iconBox:{
+      [theme.breakpoints.down("sm")]: {
+        marginTop:"30px"
+      },
+    }
+    ,
     paper: {
       width: "550px",
       height: "auto",

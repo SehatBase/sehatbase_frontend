@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Button, Typography, Paper } from "@mui/material";
 import { useStyles } from "../styles/contactStyle";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import Form from "./Form";
 
 export default function ContactUs() {
@@ -17,27 +18,29 @@ export default function ContactUs() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore
         </Typography>
-        <div className={classes.iconCont}>
-          <WhatsAppIcon className={classes.icon}></WhatsAppIcon>
-          <div>
-            <Typography className={classes.normalText}>
-              <b>What's App Chat</b>
-            </Typography>
-            <Typography className={classes.normalText}>
-              XXXXXXXXXXXXXXX
-            </Typography>
-          </div>
-        </div>
-        <div>
+        <div className={classes.iconBox}>
           <div className={classes.iconCont}>
             <WhatsAppIcon className={classes.icon}></WhatsAppIcon>
             <div>
               <Typography className={classes.normalText}>
-                <b>Skype Meet</b>
+                <b>What's App Chat</b>
               </Typography>
               <Typography className={classes.normalText}>
-                example@SehatBase.com
+                XXXXXXXXXXXXXXX
               </Typography>
+            </div>
+          </div>
+          <div>
+            <div className={classes.iconCont}>
+              <MailOutlineIcon className={classes.icon}></MailOutlineIcon>
+              <div>
+                <Typography className={classes.normalText}>
+                  <b>Email</b>
+                </Typography>
+                <Typography className={classes.normalText}>
+                  example@SehatBase.com
+                </Typography>
+              </div>
             </div>
           </div>
         </div>
