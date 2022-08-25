@@ -4,8 +4,6 @@ import { fontFamily } from '@mui/system'
 
 export default makeStyles((theme) => ({
 
-
-
     rootContainer: {
         fontFamily: "Open Sans",
         backgroundColor: "#FFFFFF",
@@ -17,12 +15,13 @@ export default makeStyles((theme) => ({
 
     headerContainer: {
         position: 'absolute',
-        width: '1026px',
-        height: '244px',
-        left: '240px',
+        width: 'fit-content',
+        height: 'fit-content',
+        left: '5vw',
         top: '114px',
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+
     },
     title: {
         fontFamily: 'Open Sans',
@@ -52,33 +51,29 @@ export default makeStyles((theme) => ({
         position: 'absolute',
         top: '425px',
         bottom:'696px',
-        minHeight: "957px",
         minWidth: "100vw",
-        display: "flex",
-       
+        display: "grid",
+        gridTemplateRows:'auto auto',
+        gap:'1vh',
         justifyContent: 'center',
         alignItems:'center',
-        [theme.breakpoints.up('sm')]: {
-            display: 'block',
-            width: 'auto'
-          },
 
     },
 
     feature1Container: {
        
-        width: '1283.3px',
+        width: 'auto',
         height: '304px',
-        display: 'flex',
-        flexDirection: 'row',
+        display: 'grid',
+        gridTemplateColumns:'auto auto'
         
     },
     feature2Container: {
         marginTop:'153px',
-        width: '1283.3px',
+        width: 'auto',
         height: '304px',
-        display: 'flex',
-        flexDirection: 'row',
+        display: 'grid',
+        gridTemplateColumns:'auto auto'
        
     },
 
@@ -109,7 +104,9 @@ export default makeStyles((theme) => ({
     featurecontent: {
         display: 'flex',
         flexDirection: 'column',
-        paddingLeft: '152px',
+        wordWrap: 'break-word',
+        paddingLeft: '5vw',
+        width: 'fit-content',
 
     },
 
@@ -194,6 +191,10 @@ export default makeStyles((theme) => ({
         display: 'flex-wrap',
         color: '#FFFFFF',
         
+    },
+
+    featureicon: {
+        width: 'fit-content',
     },
 
     feature3icon :{
