@@ -65,6 +65,9 @@ const useStyles = makeStyles((theme)=>{
         [theme.breakpoints.down('sm')]:{
             width:"60%",
         },
+    },
+    none:{
+        display:"none"
     }
 
 }})
