@@ -54,14 +54,23 @@ const Footer = () => {
             width: `${isMobile ? "100%" : isTablet ? "60%" : "50%"}`,
             marginLeft: "auto",
             display: "flex",
-            justifyContent: `${isMobile ? "space-evenly" : "space-between"}`,
+            justifyContent: "center",
             alignItems: "center",
             height: "16rem",
             ...(isMobile ? { paddingTop: "2rem" } : {}),
           }}
         >
-          <LinksList heading="Mobile app" links={mobileAppLinks} />
-          <LinksList heading="Company" links={companyLinks} />
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              justifyContent: `${isMobile ? "space-evenly" : "space-between"}`,
+              alignItems: "start",
+            }}
+          >
+            <LinksList heading="Mobile app" links={mobileAppLinks} />
+            <LinksList heading="Company" links={companyLinks} />
+          </Box>
         </Box>
         {/* Horizontal Rule */}
         <Box
