@@ -121,7 +121,7 @@ export default makeStyles((theme) => ({
         fontFamily: 'Open Sans',
         fontStyle: 'normal',
         fontWeight: '700',
-        fontSize: '24px',
+        fontSize: '32px',
         lineHeight: '36px',
         /* or 150% */
         letterSpacing: '-0.015em',
@@ -144,7 +144,7 @@ export default makeStyles((theme) => ({
         fontFamily: 'Open Sans',
         fontStyle: 'normal',
         fontWeight: '400',
-        fontSize: '18px',
+        fontSize: '24px',
         lineHeight: '36px',
         /* or 150% */
         letterSpacing: '-0.015em',
@@ -194,7 +194,7 @@ export default makeStyles((theme) => ({
     },
 
     featureicon: {
-        width: 'fit-content',
+        // width: 'fit-content',
     },
 
     feature3icon :{

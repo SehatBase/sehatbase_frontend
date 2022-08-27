@@ -14,7 +14,6 @@ function Features() {
   const theme = useTheme();
   const classes = useStyles();
   const isMobile = useMediaQuery(theme.breakpoints.up('sm'));
-  console.log(isMobile);
   return (
     <Container className={classes.rootContainer}>
         <Container className={classes.headerContainer}>
@@ -39,8 +38,8 @@ function Features() {
         <Container className={classes.featureicon}>
           <Image
             src={feature1Icon}
-            width= {500}
-            height={500}
+            width= {700}
+            height={700}
             />
         </Container>
           <Container className={classes.featurecontent}>
@@ -71,9 +70,9 @@ function Features() {
           <Container className={classes.featurecontent}>
               <Typography className={classes.featureHeading}>
               Find And Book Appointment
+              </Typography>
               <Typography className={classes.featureSubtitle}>
               With Verified Doctors
-              </Typography>
               </Typography>
               <Typography className={classes.featureDescription}>
               Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia   nsequuntur magni dolores eos qui ratione  Nemo enim ipsam voluptatem quia voluptas sit .
@@ -98,9 +97,9 @@ function Features() {
         <Container className={classes.feature3content}>
               <Typography className={classes.feature3Heading} >
               Get Medicines Online
+              </Typography>
               <Typography className={classes.feature3Subtitle}>
               Cheapest Rates | Same Day Delivery
-              </Typography>
               </Typography>
               <Typography className={classes.feature3Description}>
               Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia   nsequuntur magni dolores eos qui ratione  Nemo enim ipsam voluptatem quia voluptas sit .
