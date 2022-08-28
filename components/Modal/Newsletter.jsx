@@ -33,11 +33,11 @@ export default function Newsletter() {
         <Modal open={open} onClose={handleClose}>
             <Container className={classes.innerContainer}>
               <div className={classes.textDiv}>
-                <Typography className={classes.typo2}>
-                  Get Latest News And Updates In Your Inbox.
-                </Typography>
                 <Typography className={classes.typo3}>
                   NewsLetter Subscription
+                </Typography>
+                <Typography className={classes.typo2}>
+                  Get Latest News And Updates In Your Inbox.
                 </Typography>
               </div>
               <div className={classes.inputDiv}>
