@@ -31,12 +31,7 @@ export default function Newsletter() {
     <div>
       <Button className={classes.none}></Button>
         <Modal open={open} onClose={handleClose}>
-          <Container className={classes.modalContainer} maxWidth={false}>
-            <Typography className={classes.typo1}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore
-            </Typography>
-            <Container className={classes.innerContainer} maxWidth={false}>
+            <Container className={classes.innerContainer}>
               <div className={classes.textDiv}>
                 <Typography className={classes.typo2}>
                   Get Latest News And Updates In Your Inbox.
@@ -63,7 +58,6 @@ export default function Newsletter() {
                 </FormGroup>
               </div>
             </Container>
-          </Container>
         </Modal>
     </div>
   );

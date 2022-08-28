@@ -5,8 +5,8 @@ const useStyles = makeStyles((theme)=>{
   return {
     modalContainer:{
         width:"100%",
-        height:"694px",
-        marginTop:"2%",
+        height:"494px",
+        marginTop:"8%",
         backgroundColor:"#FFFFFF",
         padding:"10% 5%",
         display:"flex",
@@ -48,19 +48,21 @@ const useStyles = makeStyles((theme)=>{
         boxShadow:" 0px 4px 12px rgba(0, 0, 0, 0.13)",
         display:"flex",
         padding:"50px",
+        marginTop:"15%",
+        backgroundColor:"#FFFFFF",
         [theme.breakpoints.down('sm')]:{
             flexDirection:"column",
         },
     },
     inputDiv:{
-        padding:"25px",
+        padding:"25px 0px",
         width:"60%",
         [theme.breakpoints.down('sm')]:{
             width:"100%",
         },
     },
     textField:{
-        width:"80%",
+        width:"70%",
         background: "#F8F7F7",
         [theme.breakpoints.down('sm')]:{
             width:"60%",
