@@ -51,7 +51,7 @@ const Footer = () => {
         <FooterLogo height={circleSize} width={circleSize} />
         <Box
           sx={{
-            width: `${isMobile ? "100%" : isTablet ? "60%" : "50%"}`,
+            width: `${isMobile ? "100%" : isTablet ? "50%" : "50%"}`,
             marginLeft: "auto",
             display: "flex",
             justifyContent: "center",
@@ -62,10 +62,10 @@ const Footer = () => {
         >
           <Box
             sx={{
-              width: "100%",
+              width: "80%",
               display: "flex",
               justifyContent: `${isMobile ? "space-evenly" : "space-between"}`,
-              alignItems: "start",
+              ...(!isMobile && { alignItems: "start", marginRight: "auto" }),
             }}
           >
             <LinksList heading="Mobile app" links={mobileAppLinks} />
@@ -80,7 +80,7 @@ const Footer = () => {
             margin: "1rem auto",
           }}
         ></Box>
-        <FooterBottom isMobile={isMobile} isTablet={isTablet} />
+        <FooterBottom />
       </Container>
     </Box>
   );

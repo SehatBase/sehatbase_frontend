@@ -1,14 +1,19 @@
 import { Link, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Image from "next/image";
+import { useResponsive } from "../../hooks";
 
-const FooterBottom = ({ isMobile, isTablet }) => {
+const FooterBottom = () => {
+  const { isMobile, isTablet } = useResponsive();
+
   return (
     <Box
       sx={{
         display: "flex",
         width: `${isMobile ? "100%" : isTablet ? "60%" : "50%"}`,
-        ...(isMobile ? { marginX: "auto" } : { marginLeft: "auto" }),
+        ...(isMobile || isTablet
+          ? { marginX: "auto" }
+          : { marginLeft: "auto" }),
         flexDirection: isMobile ? "column" : "row",
         justifyContent: `${isTablet ? "space-evenly" : "space-between"}`,
         alignItems: "center",
