@@ -1,5 +1,5 @@
-import { alpha, makeStyles } from '@material-ui/core/styles'
-import { fontFamily } from '@mui/system'
+import { alpha, makeStyles } from '@material-ui/core/styles';
+import { fontFamily } from '@mui/system';
 
 
 export default makeStyles((theme) => ({
@@ -50,31 +50,31 @@ export default makeStyles((theme) => ({
     featuresContainer: {
         position: 'absolute',
         top: '425px',
-        bottom:'696px',
+        bottom: '696px',
         minWidth: "100vw",
         display: "grid",
-        gridTemplateRows:'auto auto',
-        gap:'1vh',
+        gridTemplateRows: 'auto auto',
+        gap: '1vh',
         justifyContent: 'center',
-        alignItems:'center',
+        alignItems: 'center',
 
     },
 
     feature1Container: {
-       
+
         width: 'auto',
         height: '304px',
         display: 'grid',
-        gridTemplateColumns:'auto auto'
-        
+        gridTemplateColumns: 'auto auto'
+
     },
     feature2Container: {
-        marginTop:'153px',
+        marginTop: '153px',
         width: 'auto',
         height: '304px',
         display: 'grid',
-        gridTemplateColumns:'auto auto'
-       
+        gridTemplateColumns: 'auto auto'
+
     },
 
     feature3rootContainer: {
@@ -85,8 +85,8 @@ export default makeStyles((theme) => ({
         flexDirection: 'row',
         left: '0px',
         top: '1356px',
-    
-    
+
+
     },
 
     feature3Container: {
@@ -96,10 +96,10 @@ export default makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems:'center',
-            },
+        alignItems: 'center',
+    },
 
-    
+
 
     featurecontent: {
         display: 'flex',
@@ -113,8 +113,8 @@ export default makeStyles((theme) => ({
     feature3content: {
         display: 'flex',
         flexDirection: 'column',
-        width:'500px',
-       
+        width: '500px',
+
     },
 
     featureHeading: {
@@ -174,7 +174,7 @@ export default makeStyles((theme) => ({
         /* or 150% */
         letterSpacing: '-0.015em',
         overflow: 'hidden',
-        display:'flex',
+        display: 'flex',
         flexWrap: 'wrap',
         color: 'rgba(0, 0, 0, 0.8)',
     },
@@ -190,17 +190,17 @@ export default makeStyles((theme) => ({
         letterSpacing: '-0.015em',
         display: 'flex-wrap',
         color: '#FFFFFF',
-        
+
     },
 
     featureicon: {
         // width: 'fit-content',
     },
 
-    feature3icon :{
-            width: 'fit-content',
-            marginBottom:'121px',
-            
+    feature3icon: {
+        width: 'fit-content',
+        marginBottom: '121px',
+
     },
 
     featureButton: {
@@ -215,10 +215,10 @@ export default makeStyles((theme) => ({
         fontFamily: 'Montserrat',
         fontSize: '15px',
         fontWeight: '500',
-        '&:hover': { 
+        '&:hover': {
             backgroundColor: '#7428EA',
             color: '#FFFFFF',
         }
     }
 
-}))
+}));
