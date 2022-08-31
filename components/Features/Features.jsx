@@ -17,7 +17,7 @@ function Features() {
   return (
     <Container className={classes.rootContainer}>
         <Container className={classes.headerContainer}>
-        <Typography className={classes.title} >
+        <Typography className={classes.title}>
           WHAT WE DO
         </Typography>
         <Container className={classes.heading2}>
@@ -29,17 +29,17 @@ function Features() {
           Our Main Features
         </Typography>
         </Container>
-        <Typography sx={{fontSize: 20 ,  fontFamily: "Open Sans", width:'auto'}}>
+        <Typography sx={{fontSize: 20 ,  fontFamily: "Open Sans", width:'60%'}}>
         Our goal is to help our patients with the best medical services in Pakistan. Our goal is to help our patients with the best medical services in Pakistan
         </Typography>
         </Container>
         <Container className={classes.featuresContainer}>
-        <Container className={classes.feature1Container}>
+        <Container className={classes.featureContainer}>
         <Container className={classes.featureicon}>
           <Image
             src={feature1Icon}
-            width= {700}
-            height={700}
+            width= {300}
+            height={300}
             />
         </Container>
           <Container className={classes.featurecontent}>
@@ -59,12 +59,12 @@ function Features() {
           </Container>
         </Container>
 
-        <Container className={classes.feature2Container}>
+        <Container className={classes.featureContainer}>
         <Container className={classes.featureicon}>
           <Image
             src={feature2Icon}
-            width= {500}
-            height={500}
+            width= {300}
+            height={300}
             />
         </Container>
           <Container className={classes.featurecontent}>

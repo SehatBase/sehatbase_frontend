@@ -9,16 +9,15 @@ export default makeStyles((theme) => ({
         backgroundColor: "#FFFFFF",
         minHeight: "100vh",
         minWidth: "100vw",
-        display: "flex",
+        // display: "flex",
 
     },
 
     headerContainer: {
-        position: 'absolute',
+        position: 'relative',
         width: 'fit-content',
         height: 'fit-content',
-        left: '5vw',
-        top: '114px',
+        top: '5vh',
         display: 'flex',
         flexDirection: 'column',
 
@@ -48,49 +47,39 @@ export default makeStyles((theme) => ({
     },
 
     featuresContainer: {
-        position: 'absolute',
-        top: '425px',
-        bottom:'696px',
+        position: 'relative',
+        top: '20vh',
         minWidth: "100vw",
         display: "grid",
         gridTemplateRows:'auto auto',
-        gap:'1vh',
+        gap:'15vh',
         justifyContent: 'center',
         alignItems:'center',
 
     },
 
-    feature1Container: {
-       
+    featureContainer: {    
         width: 'auto',
-        height: '304px',
+        height: 'fit-content',
         display: 'grid',
-        gridTemplateColumns:'auto auto'
+        gridTemplateColumns:'auto auto',
         
-    },
-    feature2Container: {
-        marginTop:'153px',
-        width: 'auto',
-        height: '304px',
-        display: 'grid',
-        gridTemplateColumns:'auto auto'
-       
     },
 
     feature3rootContainer: {
-        position: 'absolute',
+        position: 'relative',
         minWidth: '100vw',
         height: '523px',
         display: 'flex',
         flexDirection: 'row',
         left: '0px',
-        top: '1356px',
+        top: '30vh',
     
     
     },
 
     feature3Container: {
-        position: 'absolute',
+        position: 'relative',
         minWidth: '100vw',
         height: '523px',
         display: 'flex',
@@ -132,7 +121,7 @@ export default makeStyles((theme) => ({
         fontFamily: 'Open Sans',
         fontStyle: 'normal',
         fontWeight: '700',
-        fontSize: '24px',
+        fontSize: '2vw',
         lineHeight: '36px',
         /* or 150% */
         letterSpacing: '-0.015em',
@@ -155,7 +144,7 @@ export default makeStyles((theme) => ({
         fontFamily: 'Open Sans',
         fontStyle: 'normal',
         fontWeight: '400',
-        fontSize: '18px',
+        fontSize: '1.5vw',
         lineHeight: '36px',
         /* or 150% */
         letterSpacing: '-0.015em',
@@ -183,8 +172,8 @@ export default makeStyles((theme) => ({
         fontFamily: 'Open Sans',
         fontStyle: 'normal',
         fontWeight: '400',
-        fontSize: '18px',
-        lineHeight: '30px',
+        fontSize: '1.5vw',
+        lineHeight: '4vh',
         textAlign: 'justify',
         /* or 150% */
         letterSpacing: '-0.015em',
@@ -199,7 +188,7 @@ export default makeStyles((theme) => ({
 
     feature3icon :{
             width: 'fit-content',
-            marginBottom:'121px',
+            marginBottom:'10vh',
             
     },
 
