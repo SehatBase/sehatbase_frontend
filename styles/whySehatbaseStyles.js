@@ -6,13 +6,14 @@ export default makeStyles((theme) => ({
     rootContainer: {
         position: 'relative',
         top: '30vh',
-        height: "100vh",
+        fontFamily: "Open Sans",
+        backgroundColor: "#FFFFFF",
+        minHeight: "100vh",
         minWidth: "100vw",
-        display: 'flex',  
-        justifyContent: 'center',
-        alignItems: 'center',
+        display: 'flex',
+        justifyContent:'center',
+        alignItems:'center',
         [theme.breakpoints.down('900')]: {
-            top: '30vh',
             flexDirection:'column',
         }
     },
@@ -24,7 +25,7 @@ export default makeStyles((theme) => ({
         height: 'fit-content',
         margin: '0%',
         [theme.breakpoints.down('900')]: {
-            top: '5vh',
+            top: '0vh',
             margin: '5%',
         }
     },

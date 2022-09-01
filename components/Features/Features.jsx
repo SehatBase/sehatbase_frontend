@@ -29,7 +29,7 @@ function Features() {
           Our Main Features
         </Typography>
         </Container>
-        <Typography sx={{fontSize: 20 ,  fontFamily: "Open Sans", width:'60%'}}>
+        <Typography className={classes.subtitle}>
         Our goal is to help our patients with the best medical services in Pakistan. Our goal is to help our patients with the best medical services in Pakistan
         </Typography>
         </Container>

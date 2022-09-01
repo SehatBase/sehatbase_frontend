@@ -36,6 +36,15 @@ export default makeStyles((theme) => ({
         display: 'flex'
     },
 
+    subtitle:{
+        fontSize: 20 ,  
+        fontFamily: "Open Sans", 
+        width:'60%',
+        [theme.breakpoints.down('900')]: {
+            width:'100%',
+        }
+    },
+
     title2: {
         fontFamily: 'Montserrat',
         fontStyle: 'normal',
@@ -102,7 +111,7 @@ export default makeStyles((theme) => ({
     feature3content: {
         display: 'flex',
         flexDirection: 'column',
-        width:'500px',
+        width: '50%'
        
     },
 
@@ -121,11 +130,10 @@ export default makeStyles((theme) => ({
         fontFamily: 'Open Sans',
         fontStyle: 'normal',
         fontWeight: '700',
-        fontSize: '2vw',
-        lineHeight: '36px',
-        /* or 150% */
-        letterSpacing: '-0.015em',
+        fontSize: '24px',
+        lineHeight: '30px',
 
+        letterSpacing: '-0.015em',
         color: '#FFFFFF',
     },
 
@@ -144,7 +152,7 @@ export default makeStyles((theme) => ({
         fontFamily: 'Open Sans',
         fontStyle: 'normal',
         fontWeight: '400',
-        fontSize: '1.5vw',
+        fontSize: '20px',
         lineHeight: '36px',
         /* or 150% */
         letterSpacing: '-0.015em',
@@ -172,8 +180,8 @@ export default makeStyles((theme) => ({
         fontFamily: 'Open Sans',
         fontStyle: 'normal',
         fontWeight: '400',
-        fontSize: '1.5vw',
-        lineHeight: '4vh',
+        fontSize: '18px',
+        lineHeight: '18px',
         textAlign: 'justify',
         /* or 150% */
         letterSpacing: '-0.015em',
@@ -183,7 +191,7 @@ export default makeStyles((theme) => ({
     },
 
     featureicon: {
-        // width: 'fit-content',
+        width: 'fit-content',
     },
 
     feature3icon :{
@@ -194,7 +202,7 @@ export default makeStyles((theme) => ({
 
     featureButton: {
         marginTop: "33px",
-        width: '262.17px',
+        width: '30vw',
         height: '39.86px',
         borderRadius: '6px',
         border: '1px solid #7428EA',
