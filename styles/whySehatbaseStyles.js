@@ -8,11 +8,12 @@ export default makeStyles((theme) => ({
         top: '30vh',
         height: "100vh",
         minWidth: "100vw",
-        display: 'flex',
+        display: 'flex',  
         justifyContent: 'center',
         alignItems: 'center',
         [theme.breakpoints.down('900')]: {
-            top: '10vh',
+            top: '30vh',
+            flexDirection:'column',
         }
     },
 
@@ -21,7 +22,11 @@ export default makeStyles((theme) => ({
         top: '5vh',
         width: 'fit-content',
         height: 'fit-content',
-        margin: '0%'
+        margin: '0%',
+        [theme.breakpoints.down('900')]: {
+            top: '5vh',
+            margin: '5%',
+        }
     },
 
     contentContainer: {

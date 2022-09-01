@@ -12,7 +12,7 @@ function WhySehatbase() {
   return (
     <Container className={classes.rootContainer}>
         <Container className={classes.imageContainer}>
-            {!isMobile && (
+            { (
         <Image 
         src={whySehatbaseimage} 
         />
