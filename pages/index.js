@@ -1,12 +1,14 @@
 import React from 'react';
-// import Navbar from "../components/Navbar";
-// import HeroSection from '../components/HeroSection';
-import Newsletter from '../components/Modal/Newsletter';
+import Features from '../components/Features/features';
+import Navbar from "../components/Navbar";
+import HeroSection from '../components/HeroSection';
+
+
 
 export default function Home() {
   return (
     <>
-      <Newsletter />
+      <Features/>
     </>
   );
 }
