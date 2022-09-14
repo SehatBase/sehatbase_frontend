@@ -1,7 +1,8 @@
 import React from 'react';
-import Navbar from "../components/Navbar";
-import HeroSection from '../components/HeroSection';
+import AboutUs from "../components/AboutUs";
 import Features from '../components/Features/Features';
+import HeroSection from '../components/HeroSection';
+import Navbar from "../components/Navbar";
 import WhySehatbase from '../components/WhySehatbase';
 
 
@@ -10,6 +11,7 @@ export default function Home() {
     <>
       <Navbar />
       <HeroSection />
+      <AboutUs />
       <Features />
       <WhySehatbase />
     </>
