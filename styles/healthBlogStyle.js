@@ -5,6 +5,8 @@ import { fontFamily } from '@mui/system'
 export default makeStyles((theme) => ({
 
     rootContainer:{
+      position: 'relative',
+      top: '30vh',
         fontFamily: "Open Sans",
         backgroundColor: "#FFFFFF",
         minHeight: "100vh",
@@ -128,8 +130,8 @@ export default makeStyles((theme) => ({
         color: '#7428EA',
         border:"1px solid #7428EA",
         background: '#ffffff',
-        padding: '6px 12px',
-        borderRadius: '8px',
+        padding: '6px 20px',
+        borderRadius: '6px',
         transition: 'background 0.2s',
         '&:hover': { 
           backgroundColor: '#7428EA',
@@ -140,7 +142,8 @@ export default makeStyles((theme) => ({
       btn:{
         display: 'flex',
         justifyContent:'center',
-        marginBottom:'5%'
+        marginBottom:'5%',
+       
       }
 
       

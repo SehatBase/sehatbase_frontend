@@ -1,5 +1,4 @@
 import { alpha, makeStyles } from '@material-ui/core/styles';
-import { fontFamily } from '@mui/system';
 
 
 export default makeStyles((theme) => ({
@@ -9,7 +8,7 @@ export default makeStyles((theme) => ({
         backgroundColor: "#FFFFFF",
         minHeight: "100vh",
         minWidth: "100vw",
-        // display: "flex",
+        padding:'0px'
 
     },
 
@@ -83,7 +82,6 @@ export default makeStyles((theme) => ({
         flexDirection: 'row',
         left: '0px',
         top: '30vh',
-
 
     },
 

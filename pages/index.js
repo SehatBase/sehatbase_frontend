@@ -9,10 +9,11 @@ import HealthBlog from '../components/HealthBlog';
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <HeroSection />
+      {/* <Navbar />
+      <HeroSection /> */}
       <Features />
       <WhySehatbase />
+      <HealthBlog/>
     </>
   );
 }
