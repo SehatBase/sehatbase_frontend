@@ -6,11 +6,7 @@ import AboutUsContent from "./AboutUsContent";
 import AboutUsHeading from "./AboutUsHeading";
 import { AboutUsImage } from "./AboutUsImage";
 
-const aboutUsPoints = [
-  "Sed ut perspiciatis unde omnis iste natus error sit voluptate",
-  "Sed ut perspiciatis unde omnis iste natus error sit voluptate",
-  "Sed ut perspiciatis unde omnis iste natus error sit voluptate",
-];
+const aboutUsPoints = [];
 
 const AboutUs = () => {
   const theme = useTheme();

@@ -12,9 +12,10 @@ const AboutUsContent = ({ aboutUsPoints }) => {
           Sehat Base Telemedicine Company
         </Typography>
         <Typography variant="subtitle1" align="justify" fontWeight="normal">
-          SehatBase is an artificially intelligent one-stop disease diagnosis
-          and treatment platform which enables users to diagnose disease and
-          have an appointment with doctors instantly.
+          SehatBase is an artificially intelligent all in one disease diagnosis
+          and treatment platform. It is a digital healthcare platform which aims
+          to reduce the chances of inaccurate diagnoses and bridge the gap
+          between patients and doctors.
         </Typography>
       </Box>
 
