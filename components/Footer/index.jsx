@@ -45,6 +45,8 @@ const Footer = () => {
         position: "relative",
         height: "100%",
         paddingBottom: "2.5rem",
+        zIndex: 0,
+        marginTop: isMobile ? "25rem" : "15rem",
       }}
     >
       <Container>
