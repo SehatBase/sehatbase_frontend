@@ -30,35 +30,38 @@ export default function Newsletter() {
   return (
     <div>
       <Button className={classes.none}></Button>
-        <Modal open={open} onClose={handleClose}>
-            <Container className={classes.innerContainer}>
-              <div className={classes.textDiv}>
-                <Typography className={classes.typo3}>
-                  NewsLetter Subscription
-                </Typography>
-                <Typography className={classes.typo2}>
-                  Get Latest News And Updates In Your Inbox.
-                </Typography>
-              </div>
-              <div className={classes.inputDiv}>
-                <FormGroup row>
-                  <TextField
-                    className={classes.textField}
-                    variant="outlined"
-                    value={email}
-                    onChange={handleChange}
-                  />
-                  <Button
-                    onClick={handleSubmit}
-                    variant="contained"
-                    disableElevation
-                  >
-                    SUBSCRIBE
-                  </Button>
-                </FormGroup>
-              </div>
-            </Container>
-        </Modal>
+      <Modal open={open} onClose={handleClose}>
+        <Container className={classes.innerContainer}>
+          <Button className={classes.closeButton} onClick={handleClose}>X</Button>
+          <Container className={classes.innerContainer1}>
+            <div className={classes.textDiv}>
+              <Typography className={classes.typo3}>
+                NewsLetter Subscription
+              </Typography>
+              <Typography className={classes.typo2}>
+                Get Latest News And Updates In Your Inbox.
+              </Typography>
+            </div>
+            <div className={classes.inputDiv}>
+              <FormGroup row>
+                <TextField
+                  className={classes.textField}
+                  variant="outlined"
+                  value={email}
+                  onChange={handleChange}
+                />
+                <Button
+                  onClick={handleSubmit}
+                  variant="contained"
+                  disableElevation
+                >
+                  SUBSCRIBE
+                </Button>
+              </FormGroup>
+            </div>
+          </Container>
+        </Container>
+      </Modal>
     </div>
   );
 }

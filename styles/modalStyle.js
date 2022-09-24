@@ -46,10 +46,14 @@ const useStyles = makeStyles((theme)=>{
     },
     innerContainer:{
         boxShadow:" 0px 4px 12px rgba(0, 0, 0, 0.13)",
-        display:"flex",
-        padding:"50px",
         marginTop:"15%",
         backgroundColor:"#FFFFFF",
+        position:"relative"
+    },
+    innerContainer1:{
+        display:"flex",
+        padding:"50px",
+        padding:"5% 5%",
         [theme.breakpoints.down('sm')]:{
             flexDirection:"column",
         },
@@ -70,6 +74,19 @@ const useStyles = makeStyles((theme)=>{
     },
     none:{
         display:"none"
+    },
+    closeButton:{
+        background:"none",
+        color:"#909090",
+        boxShadow:"none",
+        position:"absolute",
+        fontSize:"20px",
+        left:"0",
+        "&:hover":{
+            background:"none",
+            boxShadow:"none",
+            color: "#7428EA",
+        },
     }
 
 }})
