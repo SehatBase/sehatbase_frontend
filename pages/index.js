@@ -1,7 +1,8 @@
 import React from 'react';
-import Navbar from "../components/Navbar";
-import HeroSection from '../components/HeroSection';
+import AboutUs from "../components/AboutUs";
 import Features from '../components/Features/Features';
+import HeroSection from '../components/HeroSection';
+import Navbar from "../components/Navbar";
 import WhySehatbase from '../components/WhySehatbase';
 import HealthBlog from '../components/HealthBlog';
 
@@ -9,8 +10,9 @@ import HealthBlog from '../components/HealthBlog';
 export default function Home() {
   return (
     <>
-      {/* <Navbar />
-      <HeroSection /> */}
+      <Navbar />
+      <HeroSection />
+      <AboutUs />
       <Features />
       <WhySehatbase />
       <HealthBlog/>
