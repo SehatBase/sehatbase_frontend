@@ -4,6 +4,7 @@ import Features from '../components/Features/Features';
 import HeroSection from '../components/HeroSection';
 import Navbar from "../components/Navbar";
 import WhySehatbase from '../components/WhySehatbase';
+import HealthBlog from '../components/HealthBlog';
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <AboutUs />
       <Features />
       <WhySehatbase />
+      <HealthBlog/>
     </>
   );
 }

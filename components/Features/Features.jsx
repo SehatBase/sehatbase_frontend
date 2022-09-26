@@ -92,7 +92,7 @@ function Features() {
           layout='fill'
           
            />
-    <Container  className={classes.feature3Container}>
+    <Container maxWidth={false} className={classes.feature3Container}>
       
         <Container className={classes.feature3content}>
               <Typography className={classes.feature3Heading} >
