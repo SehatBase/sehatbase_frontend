@@ -38,53 +38,58 @@ const Footer = () => {
   const circleSize = isMobile ? 150 : 300;
 
   return (
-    <Box
-      component="footer"
-      sx={{
-        background: theme.palette.primary.main,
-        position: "relative",
-        height: "100%",
-        paddingBottom: "2.5rem",
-        zIndex: 0,
-        marginTop: isMobile ? "25rem" : "15rem",
-      }}
-    >
-      <Container>
-        <FooterLogo height={circleSize} width={circleSize} />
-        <Box
-          sx={{
-            width: `${isMobile ? "100%" : isTablet ? "50%" : "50%"}`,
-            marginLeft: "auto",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "16rem",
-            ...(isMobile ? { paddingTop: "2rem" } : {}),
-          }}
-        >
+    <>
+      <Box sx={{ py: 5 }}></Box>
+      <Box
+        component="footer"
+        sx={{
+          background: theme.palette.primary.main,
+          position: "relative",
+          height: "100%",
+          paddingBottom: "2.5rem",
+          zIndex: 0,
+          marginTop: "15rem",
+        }}
+      >
+        <Container>
+          <FooterLogo height={circleSize} width={circleSize} />
           <Box
             sx={{
-              width: "80%",
+              width: `${isMobile ? "100%" : isTablet ? "50%" : "50%"}`,
+              marginLeft: "auto",
               display: "flex",
-              justifyContent: `${isMobile ? "space-evenly" : "space-between"}`,
-              ...(!isMobile && { alignItems: "start", marginRight: "auto" }),
+              justifyContent: "center",
+              alignItems: "center",
+              height: "16rem",
+              ...(isMobile ? { paddingTop: "2rem" } : {}),
             }}
           >
-            <LinksList heading="Mobile app" links={mobileAppLinks} />
-            <LinksList heading="Company" links={companyLinks} />
+            <Box
+              sx={{
+                width: "80%",
+                display: "flex",
+                justifyContent: `${
+                  isMobile ? "space-evenly" : "space-between"
+                }`,
+                ...(!isMobile && { alignItems: "start", marginRight: "auto" }),
+              }}
+            >
+              <LinksList heading="Mobile app" links={mobileAppLinks} />
+              <LinksList heading="Company" links={companyLinks} />
+            </Box>
           </Box>
-        </Box>
-        {/* Horizontal Rule */}
-        <Box
-          sx={{
-            width: "90%",
-            borderTop: "2px solid white",
-            margin: "1rem auto",
-          }}
-        ></Box>
-        <FooterBottom />
-      </Container>
-    </Box>
+          {/* Horizontal Rule */}
+          <Box
+            sx={{
+              width: "90%",
+              borderTop: "2px solid white",
+              margin: "1rem auto",
+            }}
+          ></Box>
+          <FooterBottom />
+        </Container>
+      </Box>
+    </>
   );
 };
 
