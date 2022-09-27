@@ -52,6 +52,11 @@ const useStyles = makeStyles((theme)=>{
             marginTop:"45%",
         },
     },
+    innerContainerPage:{
+        boxShadow:" 0px 4px 12px rgba(0, 0, 0, 0.13)",
+        backgroundColor:"#FFFFFF",
+        position:"relative",
+    },
     innerContainer1:{
         display:"flex",
         padding:"50px",

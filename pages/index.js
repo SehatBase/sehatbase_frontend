@@ -17,9 +17,9 @@ export default function Home() {
       <HeroSection />
       <AboutUs />
       <Faq/>
-      <ContactUs/>
       <Newsletter />
       <NewsLetterMain/>
+      <ContactUs/>
     </>
   );
 }

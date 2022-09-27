@@ -12,7 +12,7 @@ export default function Newsletter() {
   const [open, setOpen] = React.useState(false);
 
   useEffect(() => {
-    setTimeout(() => setOpen(true), 1000);
+    setTimeout(() => setOpen(true), 10000);
   }, []);
 
   const handleClose = () => setOpen(false);
@@ -22,7 +22,7 @@ export default function Newsletter() {
     <div>
       <Button className={classes.none}></Button>
       <Modal open={open} onClose={handleClose}>
-        <NewsCont handleClose={handleClose} />
+        <NewsCont modal={true} handleClose={handleClose} showClose={true}/>
       </Modal>
     </div>
   );

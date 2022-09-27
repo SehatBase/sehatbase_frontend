@@ -18,10 +18,10 @@ export default function NewsCont(props) {
     console.log(email);
   };
   return (
-    <Container className={classes.innerContainer} maxWidth={"sm"}>
-      <Button className={classes.closeButton} onClick={()=>props.handleClose()} >
+    <Container className={props.modal?classes.innerContainer:classes.innerContainerPage} maxWidth={props.modal?"sm":false}>
+      {props.showClose&&<Button className={classes.closeButton} onClick={()=>props.handleClose()} >
         X
-      </Button>
+      </Button>}
       <Container className={classes.innerContainer1}>
         <div className={classes.textDiv}>
           <Typography className={classes.typo3}>
