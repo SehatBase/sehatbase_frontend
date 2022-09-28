@@ -6,6 +6,10 @@ import Navbar from "../components/Navbar";
 import WhySehatbase from '../components/WhySehatbase';
 import Footer from '../components/Footer';
 import HealthBlog from '../components/HealthBlog';
+import NewsLetterMain from '../components/NewsLetterMain';
+import ContactUS from '../components/ContactUs';
+import Faq from '../comps/Faq';
+import Modal from '../components/Modal/Newsletter'
 
 
 export default function Home() {
@@ -17,7 +21,11 @@ export default function Home() {
       <Features />
       <WhySehatbase />
       <HealthBlog />
+      <Faq />
+      <ContactUS />
+      <NewsLetterMain />
       <Footer />
+      <Modal />
     </>
   );
 }

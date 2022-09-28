@@ -2,7 +2,7 @@ import { Button, Container, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react'
 import useStyles from '../styles/healthBlogStyle'
-import line from '../public/line4.png'
+import line from '../public/Line4.png'
 import blogcover1 from '../public/blogcover1.png'
 import blogcover2 from '../public/blogcover2.png'
 import blogcover3 from '../public/blogcover3.png'
