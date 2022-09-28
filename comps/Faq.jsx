@@ -4,13 +4,11 @@ import { useState } from "react";
 import data from "../data";
 import List from "./list";
 import {useStyles} from "../styles/faqStyle";
-import useMediaQuery from "@mui/material/useMediaQuery";
 
 
 export default function Faq() {
     const classes = useStyles();
     const [show, setShow] = useState([true, true, false, false]);
-    console.log(show);
     function handleClick(id) {
       setShow(
         show.map((item, index) => {
@@ -36,18 +34,18 @@ export default function Faq() {
       );
     });
         return (
-      <div>
-        <Container className={classes.rootContainer} maxWidth={false}>
-          <Container className={classes.innerCont} maxWidth={false}>{list}</Container>
-          <Container className={classes.innerCont2} maxWidth={false}>
+          <>
+        <div className={classes.rootContainer} >
+          <div className={classes.innerCont}>{list}</div>
+          <div className={classes.innerCont2}>
             <div className={classes.circle}>
               <Typography className={classes.typoheading2}>— FAQs</Typography>
               <Typography className={classes.typoheading1}>Frequently Asked Questions</Typography>
               <Typography className={classes.typoheading3}>Loreesssm Ipsum Dolaor sit amet consectetur adipisicing elit. Quisquam, quidem.</Typography>
             </div>
             <div className={classes.circle2}></div>
-          </Container>
-        </Container>
-      </div>
+          </div>
+        </div>
+          </>
     );
   }

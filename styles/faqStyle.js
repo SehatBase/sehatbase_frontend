@@ -1,10 +1,8 @@
 import { makeStyles } from "@material-ui/core";
-import { textAlign } from "@mui/system";
 
 const useStyles = makeStyles((theme)=>{
   return {
   rootContainer: {
-    fontFamily: "Open Sans",
     backgroundColor: "#FCFCFC",
     height: "100vh",
     display: "flex",
@@ -16,6 +14,7 @@ const useStyles = makeStyles((theme)=>{
     padding: "10%",
     color: "#7428EA",
     overflow: "scroll",
+    width:"55%",
     [theme.breakpoints.down('sm')]:{
       padding: "5%",
       height:"100%",
@@ -26,8 +25,8 @@ const useStyles = makeStyles((theme)=>{
   },
   innerCont2: {
     color: "white",
-    overflow:"hidden",
     position:"relative",
+    backgroundColor:"black",
   },
   typoheading1: {
     margin: "0px",

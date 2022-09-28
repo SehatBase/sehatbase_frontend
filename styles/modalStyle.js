@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core";
-import { textAlign } from "@mui/system";
 
 const useStyles = makeStyles((theme)=>{
   return {
@@ -46,20 +45,28 @@ const useStyles = makeStyles((theme)=>{
     },
     innerContainer:{
         boxShadow:" 0px 4px 12px rgba(0, 0, 0, 0.13)",
-        display:"flex",
-        padding:"50px",
         marginTop:"15%",
         backgroundColor:"#FFFFFF",
-        [theme.breakpoints.down('sm')]:{
-            flexDirection:"column",
+        position:"relative",
+        [theme.breakpoints.down('xs')]:{
+            marginTop:"45%",
         },
+    },
+    innerContainerPage:{
+        boxShadow:" 0px 4px 12px rgba(0, 0, 0, 0.13)",
+        backgroundColor:"#FFFFFF",
+        position:"relative",
+    },
+    innerContainer1:{
+        display:"flex",
+        padding:"50px",
+        padding:"5% 5%",
+        flexDirection:"column",
     },
     inputDiv:{
         padding:"25px 0px",
         width:"60%",
-        [theme.breakpoints.down('sm')]:{
-            width:"100%",
-        },
+        width:"100%",
     },
     textField:{
         width:"70%",
@@ -70,6 +77,19 @@ const useStyles = makeStyles((theme)=>{
     },
     none:{
         display:"none"
+    },
+    closeButton:{
+        background:"none",
+        color:"#909090",
+        boxShadow:"none",
+        position:"absolute",
+        fontSize:"20px",
+        right:"0",
+        "&:hover":{
+            background:"none",
+            boxShadow:"none",
+            color: "#7428EA",
+        },
     }
 
 }})
