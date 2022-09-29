@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => {
       width: "55%",
       [theme.breakpoints.down("sm")]: {
         padding: "5%",
-        height: "100%",
+        height: "150%",
       },
       "&::-webkit-scrollbar": {
         display: "none",
@@ -28,6 +28,9 @@ const useStyles = makeStyles((theme) => {
       color: "white",
       [theme.breakpoints.down("sm")]: {
         overflow: "hidden",
+        display:"flex",
+        alignItems:"center",
+        marginTop:"10%"
       },
       position: "relative",
     },
