@@ -39,9 +39,9 @@ export default function Faq() {
           <div className={classes.innerCont}>{list}</div>
           <div className={classes.innerCont2}>
             <div className={classes.circle}>
-              <Typography className={classes.typoheading2}>— FAQs</Typography>
-              <Typography className={classes.typoheading1}>Frequently Asked Questions</Typography>
-              <Typography className={classes.typoheading3}>Loreesssm Ipsum Dolaor sit amet consectetur adipisicing elit. Quisquam, quidem.</Typography>
+              <p className={classes.typoheading2}>— FAQs</p>
+              <p className={classes.typoheading1}>Frequently Asked Questions</p>
+              <p className={classes.typoheading3}>Loreesssm Ipsum Dolaor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
             </div>
             <div className={classes.circle2}></div>
           </div>

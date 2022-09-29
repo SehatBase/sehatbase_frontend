@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => {
   return {
     rootContainer: {
+      fontFamily: "Open Sans",
       backgroundColor: "#FCFCFC",
       height: "100vh",
       display: "flex",
@@ -93,7 +94,6 @@ const useStyles = makeStyles((theme) => {
       width: "672px",
       height: "643px",
       position: "absolute",
-      boxSizing: "border-box",
       top: "0px",
       left: "0px",
       zIndex: "1",
