@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => {
       backgroundColor: "#FCFCFC",
       height: "100vh",
       display: "flex",
+      overflow: "hidden",
       [theme.breakpoints.down("sm")]: {
         flexDirection: "column-reverse",
       },

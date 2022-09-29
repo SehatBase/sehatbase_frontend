@@ -16,11 +16,11 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <HeroSection />
-      <AboutUs />
       <Features />
       <WhySehatbase />
       <HealthBlog />
+      <HeroSection />
+      <AboutUs />
       <Faq />
       <ContactUS />
       <NewsLetterMain />
