@@ -48,7 +48,6 @@ const Footer = () => {
           height: "100%",
           paddingBottom: "2.5rem",
           zIndex: 0,
-          marginTop: "15rem",
         }}
       >
         <Container>
